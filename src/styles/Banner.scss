@@ -1,0 +1,19 @@
+.banner {
+    height: 220px;
+    margin: 45px;
+    border-radius: 25px;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 4px #000000;
+
+    .banner--text {
+        text-shadow: 2px 2px 4px #000000;
+    }
+    
+}
