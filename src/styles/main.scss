@@ -1,32 +1,30 @@
-@import "./Home.scss";
-@import "./Banner.scss";
-@import "./Card.scss";
-@import "./Footer.scss";
-
-$main-font: 'MontSerrat', sans-serif;
-$primary-color: #FF6060;
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'header';
+@use 'footer';
+@use 'banner';
+@use 'collapse';
+@use 'card';
 
 
 * {
     font-family: $main-font;
-
 }
 
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     overflow-x: hidden;
-
-
 }
 
+
 h1 {
-    font-size: 48px;
+    font-size: $title;
 }
 
 h2 {
     font-size: 36px;
-
 }
 
 h3 {

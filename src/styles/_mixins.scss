@@ -1,0 +1,71 @@
+@use 'variables' as *;
+
+// flexbox
+@mixin flex-centered {
+    display: flex;
+    justify-content: center; 
+}
+
+
+//cards 
+@mixin card($border-radius, $max-width, $height, $text-shadow) {
+    max-width: $max-width;
+    height: $height;
+    border-radius: $border-radius;
+    @include flex-centered;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  
+    &__cover {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  
+    &__title {
+      color: $secondary-color;
+      width: 60%;
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      box-sizing: border-box;
+      text-shadow: $text-shadow;
+      @include flex-centered;
+      flex-direction: column;
+    }
+  }
+  
+
+//collapses
+@mixin collapse-content($padding, $max-height, $transform, $visibility) {
+    padding: $padding;
+    max-height: $max-height;
+    transform: $transform;
+    overflow: hidden;
+    visibility: $visibility;
+    transition: max-height 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+  };
+  
+  
+  @mixin collapse-button {
+    background-color: $primary-color;
+    border: none;
+    border-radius: $border-radius-small;
+    color: $secondary-color;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @mixin collapse-icon($font-size, $font-weight) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    transition: transform 0.3s ease-out;;
+  }
+  

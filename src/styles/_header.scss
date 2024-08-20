@@ -1,6 +1,9 @@
+@use 'variables' as *;
+
+
 .header {
     height: 60px;
-    margin: 50px;
+    margin: $margin-plus;
     display: flex;
     align-items: center;
 
@@ -9,39 +12,27 @@
         width: auto;
      }
 
-
     .navbar {
-        color: black;
+        color: $paragraph-color;
         width: 100%;
 
-        .nav--links {
+        .nav__links {
             display: flex;
             flex-direction: row;
             justify-content: right;
             font-size: 20px;
             list-style: none;
+            gap: 60px;
 
 
-            .nav--link, .nav--link--active {
-                color: black;
+            .nav__link, .nav__link--active {
+                color: $paragraph-color;
                 text-decoration: none;
-                padding-right: 60px;
-                  }
+                }
             
-                  .nav--link--active {
+                  .nav__link--active {
                 text-decoration: underline;
             }
         }
     } 
 }
-
-
-
-    
-
-   
-
-      
-
-     
-

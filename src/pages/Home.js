@@ -17,12 +17,12 @@ export default function Home() {
     })
 
     return (
-        <div className="home--page"> 
+        <div className="home__page"> 
           <Banner
               backgroundImg={backgroundImgHome}
               text='Chez vous, partout et ailleurs'
           />
-          <section className="cards--section">
+          <section className="cards__section">
              {cards}
           </section>
         </div>

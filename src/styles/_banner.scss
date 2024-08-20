@@ -1,0 +1,22 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+.banner {
+    height: 220px;
+    margin: $margin-plus;
+    border-radius: $border-radius-plus;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    color: $secondary-color;
+    @include flex-centered;
+    align-items: center;
+    box-shadow: $shadow;
+
+    &__text {
+        text-shadow: $shadow;
+    }
+    
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./NavBar";
+import { NavLink } from 'react-router-dom'
 import logo from '../images/logo.png'
 
 
@@ -8,7 +8,20 @@ export default function Header() {
 
             <header className='header'>
                 <img alt='logo' src={logo} />
-                <NavBar />
+                <nav className='navbar'>
+                  <ul className='nav__links'>
+                     <li>
+                       <NavLink to="/" end className={(nav) => (nav.isActive ? "nav__link--active" : "nav__link")}>
+                        Accueil
+                       </NavLink>
+                    </li>
+                    <li>
+                       <NavLink to="/about" className={(nav) => (nav.isActive ? "nav__link--active" : "nav__link")}>
+                        A propos
+                       </NavLink>
+                    </li>
+                  </ul>
+                </nav>
             </header>
 
 

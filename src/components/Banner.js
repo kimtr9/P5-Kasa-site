@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/Banner.scss'
+import '../styles/_banner.scss'
 
 
 export default function Banner({backgroundImg, text}) {
@@ -7,7 +7,7 @@ export default function Banner({backgroundImg, text}) {
 
     return (
         <div className='banner' style={bannerStyle}>
-            {text && <h1 className='banner--text'>{text}</h1>}
+            {text && <h1 className='banner__text'>{text}</h1>}
         </div>
     )
     

@@ -1,0 +1,20 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+.cards__section {
+    background-color: $background-color;
+    border-radius: $border-radius-plus;
+    margin: $margin-plus;
+    padding: $padding-card;
+    gap: $margin-plus;
+    @include flex-centered;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+
+
+    .card {
+        @include card($border-radius-med,28%, 340px, $card-shadow);
+    }
+}

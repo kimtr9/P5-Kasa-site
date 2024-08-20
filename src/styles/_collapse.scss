@@ -1,0 +1,29 @@
+@use 'mixins' as *;
+
+.collapses__section {
+  margin: 0 100px;
+
+  .collapse__item {
+    margin: 50px;;
+
+    .collapse__content {
+      @include collapse-content(0 30px, 0, translateY(-20px), hidden);
+    
+        &--open {
+          @include collapse-content(0 30px, 300px, translateY(0), visible); 
+        }
+      }
+
+    .collapse__btn {
+      @include collapse-button;
+
+      .collapse__icon {
+        @include collapse-icon(38px, 700);
+
+        &--rotated {
+           transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+}
