@@ -1,0 +1,141 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+.accomodation__page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: $margin-plus;
+
+    .carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+    border-radius: $border-radius-plus;
+
+        .carousel--container {
+            display: flex;
+            height: 400px;
+
+            .carousel__img {
+                min-width: 100%;
+                object-fit: cover;
+            } 
+
+            .prev--btn, .next--btn {
+                position : absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: transparent;
+                color: $secondary-color;
+                border: none;
+                padding: 10px;
+                font-size: 110px;
+            }
+        
+                .prev--btn {
+                left: 10px;
+                }
+                .next--btn {
+                right: 10px;
+                }
+        }
+    }
+
+    .accomodation__info {
+        width: 60%;
+
+       
+        .accomodation__title {
+            font-size: 36px;
+            color: $primary-color;
+            font-weight: 400;
+        }
+        .accomodation__location {
+            font-size: 18px;
+            font-weight: 500;  
+        }
+        .tags--section {
+            display:flex;
+            flex-direction: row;
+            gap: 10px;
+        
+            .tags {
+                @include button-base;
+               @include button-size (100%, auto, $border-radius-plus, 5px 15px);
+               flex-wrap: nowrap;
+            }
+        }
+
+    }
+   
+    .host__info {
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+
+        .host--pic {
+            height: 70px ;
+            object-fit:contain;
+            border-radius: 50%;
+            display: flex;
+            align-self: center;
+           
+        }
+        .host--name {
+            font-size: 18px;
+            font-weight: 400;
+            color: $primary-color;
+            display: flex;
+            align-items: center;
+            padding: $padding-gen;
+
+        }
+
+        .star--rating {
+            width: 100%;
+            font-size: 24px;
+            display: flex;
+            justify-content: flex-end;
+
+
+            .stars {
+                padding: 5px;
+            }
+            .star--full {
+                color: $primary-color;
+            }
+            .star--empty {
+                color:#E3E3E3;
+            }
+        
+        }
+
+    }
+
+    .collapses--accomodation {
+        display: flex;
+        flex-direction: row;
+        margin: 0 ;
+        gap: 50px;
+    
+        .collapse__item {
+            width: 50%;
+            margin: 50px 0;
+        }
+
+        .collapse__btn {
+            border-radius: $border-radius-med;
+            font-size: 18px;
+            padding: 5px 15px;
+        }
+    }
+
+}  
+
+    
+
+

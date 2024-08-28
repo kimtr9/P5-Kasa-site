@@ -5,6 +5,8 @@
 @use 'banner';
 @use 'collapse';
 @use 'card';
+@use 'accomodation';
+@use 'notfound';
 
 
 * {
@@ -14,7 +16,7 @@
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    width: 100%;
     overflow-x: hidden;
 }
 

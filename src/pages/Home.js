@@ -10,6 +10,7 @@ export default function Home() {
         return(
             <Card 
                 key={item.id}
+                id={item.id}
                 cover={item.cover}
                 title={item.title}
             />

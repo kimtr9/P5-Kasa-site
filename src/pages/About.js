@@ -1,7 +1,8 @@
 import React from "react";
 import Banner from "../components/Banner";
-import backgroundImgAbout from '../images/background-pic-about.png';
 import Collapse from "../components/Collapse"
+import backgroundImgAbout from '../images/background-pic-about.png';
+
 
 
 export default function About() {
@@ -31,7 +32,7 @@ export default function About() {
 
 
 
-    const inCollapse = aboutList.map((item, index) => {
+    const aboutCollapses = aboutList.map((item, index) => {
         return (
             <Collapse
                  key= {index}
@@ -48,7 +49,7 @@ export default function About() {
             backgroundImg={backgroundImgAbout}
             text="" />
             <section className="collapses__section">
-                {inCollapse}
+                {aboutCollapses}
             </section>
         </div>
     )

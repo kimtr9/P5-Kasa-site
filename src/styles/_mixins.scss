@@ -6,6 +6,38 @@
     justify-content: center; 
 }
 
+//buttons
+@mixin button-size ( $height, $width, $border-radius, $padding) {
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  padding: $padding;
+}
+
+@mixin button-base {
+  @include flex-centered;
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-weight: 700;
+  border: none;
+  align-items: center;
+
+}
+  
+
+@mixin collapse-button {
+  background-color: $primary-color;
+  border: none;
+  border-radius: $border-radius-small;
+  color: $secondary-color;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 10px 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 //cards 
 @mixin card($border-radius, $max-width, $height, $text-shadow) {
@@ -49,23 +81,17 @@
   };
   
   
-  @mixin collapse-button {
-    background-color: $primary-color;
-    border: none;
-    border-radius: $border-radius-small;
-    color: $secondary-color;
-    font-size: 24px;
-    font-weight: 600;
-    padding: 10px 15px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
   @mixin collapse-icon($font-size, $font-weight) {
     font-size: $font-size;
     font-weight: $font-weight;
     transition: transform 0.3s ease-out;;
   }
   
+// not found page 
+@mixin error-page-text($font-size, $margin, $color) {
+  @include flex-centered;
+  color: $color;
+  font-size: $font-size;
+  margin: $margin;
+
+}

@@ -1,5 +1,4 @@
 import React from 'react'
-import '../styles/_collapse.scss'
 import { useState } from 'react'
 
 export default function Collapse({open, content, title}) {
@@ -19,7 +18,7 @@ export default function Collapse({open, content, title}) {
             </span>
           </button>
           <div className={`collapse__content ${isOpen ? 'collapse__content--open' : ''}`}>
-              <p>{content}</p>
+               <p>{content}</p>
           </div>
       </div>
 

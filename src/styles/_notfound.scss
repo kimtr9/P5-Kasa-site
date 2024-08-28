@@ -1,0 +1,26 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+.error__page {
+    @include flex-centered;
+    flex-direction: column;
+
+    &--title {
+        @include error-page-text(288px, $margin, $primary-color)
+    }
+    
+    &--text {
+        @include error-page-text(36px, $margin, $primary-color);
+        font-weight: 500;
+    }
+    
+    &--link {
+        @include error-page-text(18px, $margin-plus, $paragraph-color);
+    }
+
+}
+
+
+
+
