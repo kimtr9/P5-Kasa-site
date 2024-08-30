@@ -4,6 +4,7 @@
 
 .banner {
     height: 220px;
+    width: auto;
     margin: $margin-plus;
     border-radius: $border-radius-plus;
     background-position: center;
@@ -15,8 +16,22 @@
     align-items: center;
     box-shadow: $shadow;
 
+    @media only screen and (min-width:375px) and (max-width:528px) {
+        margin: 20px;
+        height: 111px;
+        justify-content: left;
+        border-radius: $border-radius-med;
+    }
+
+
     &__text {
         text-shadow: $shadow;
-    }
-    
+        @media only screen and (min-width:375px) and (max-width:528px) {
+            width: 62%;
+            padding: $padding-plus;  
+        }
+        @media only screen and (min-width:529px) and (max-width:975px) {
+            padding: $padding-plus;
+        }
+    }   
 }

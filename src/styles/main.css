@@ -4,8 +4,14 @@
   display: flex;
   align-items: center;
 }
+@media only screen and (min-width: 375px) and (max-width: 975px) {
+  .header {
+    margin: 20px;
+  }
+}
 .header .logo {
   width: auto;
+  max-height: 100%;
 }
 .header .navbar {
   color: black;
@@ -17,7 +23,15 @@
   justify-content: right;
   font-size: 20px;
   list-style: none;
-  gap: 60px;
+  gap: 10%;
+  padding-left: 10px;
+}
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .header .navbar .nav__links {
+    text-transform: uppercase;
+    font-size: 12px;
+    align-items: center;
+  }
 }
 .header .navbar .nav__links .nav__link, .header .navbar .nav__links .nav__link--active {
   color: black;
@@ -30,24 +44,30 @@
 .footer {
   background-color: black;
   color: white;
-  width: 100%;
   height: 100px;
   padding: 50px;
   margin: 0;
-  bottom: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .footer {
+    height: auto;
+  }
+}
 .footer .footer__logo {
   height: auto;
   width: 120px;
   padding: 40px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .banner {
   height: 220px;
+  width: auto;
   margin: 80px;
   border-radius: 25px;
   background-position: center;
@@ -60,15 +80,49 @@
   align-items: center;
   box-shadow: 2px 2px 4px #000000;
 }
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .banner {
+    margin: 20px;
+    height: 111px;
+    justify-content: left;
+    border-radius: 10px;
+  }
+}
 .banner__text {
   text-shadow: 2px 2px 4px #000000;
+}
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .banner__text {
+    width: 62%;
+    padding: 20px;
+  }
+}
+@media only screen and (min-width: 529px) and (max-width: 975px) {
+  .banner__text {
+    padding: 20px;
+  }
 }
 
 .collapses__section {
   margin: 0 100px;
 }
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .collapses__section {
+    margin: 70px 0;
+  }
+}
+@media only screen and (min-width: 529px) and (max-width: 975px) {
+  .collapses__section {
+    margin: 0 40px;
+  }
+}
 .collapses__section .collapse__item {
   margin: 50px;
+}
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .collapses__section .collapse__item {
+    margin: 20px;
+  }
 }
 .collapses__section .collapse__item .collapse__content {
   padding: 0 30px;
@@ -77,6 +131,16 @@
   overflow: hidden;
   visibility: hidden;
   transition: max-height 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+}
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .collapses__section .collapse__item .collapse__content {
+    padding: 0 30px;
+    max-height: 10px;
+    transform: translateY(-20px);
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+  }
 }
 .collapses__section .collapse__item .collapse__content--open {
   padding: 0px 30px;
@@ -100,6 +164,12 @@
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .collapses__section .collapse__item .collapse__btn {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+}
 .collapses__section .collapse__item .collapse__btn .collapse__icon {
   font-size: 38px;
   font-weight: 700;
@@ -120,8 +190,27 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .cards__section {
+    margin: 20px;
+    padding: 0;
+    gap: 20px;
+    background-color: transparent;
+  }
+}
+@media only screen and (min-width: 529px) and (max-width: 975px) {
+  .cards__section {
+    padding: 45px;
+    margin: 20px;
+  }
+}
+@media only screen and (min-width: 975px) and (max-width: 1024px) {
+  .cards__section {
+    padding: 10px;
+  }
+}
 .cards__section .card {
-  max-width: 28%;
+  width: 28%;
   height: 340px;
   border-radius: 10px;
   display: flex;
@@ -130,6 +219,7 @@
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 .cards__section .card__cover {
   height: 100%;
@@ -148,6 +238,46 @@
   justify-content: center;
   flex-direction: column;
 }
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .cards__section .card {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  .cards__section .card__cover {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .cards__section .card__title {
+    color: white;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    box-sizing: border-box;
+    text-shadow: 1px 1px 1px #000000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .cards__section .card {
+    min-width: 40%;
+    max-height: 300px;
+  }
+}
+.cards__section .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
 .accomodation__page {
   display: flex;
@@ -155,6 +285,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 80px;
+}
+@media only screen and (min-width: 375px) and (max-width: 975px) {
+  .accomodation__page {
+    margin: 20px;
+  }
 }
 .accomodation__page .carousel {
   position: relative;
@@ -165,6 +300,12 @@
 .accomodation__page .carousel .carousel--container {
   display: flex;
   height: 400px;
+}
+@media only screen and (min-width: 328px) and (max-width: 975px) {
+  .accomodation__page .carousel .carousel--container {
+    font-size: 30px;
+    height: 300px;
+  }
 }
 .accomodation__page .carousel .carousel--container .carousel__img {
   min-width: 100%;
@@ -180,19 +321,25 @@
   padding: 10px;
   font-size: 110px;
 }
+@media only screen and (min-width: 375px) and (max-width: 975px) {
+  .accomodation__page .carousel .carousel--container .prev--btn, .accomodation__page .carousel .carousel--container .next--btn {
+    font-size: 30px;
+  }
+}
 .accomodation__page .carousel .carousel--container .prev--btn {
   left: 10px;
 }
 .accomodation__page .carousel .carousel--container .next--btn {
   right: 10px;
 }
-.accomodation__page .accomodation__info {
-  width: 60%;
-}
 .accomodation__page .accomodation__info .accomodation__title {
-  font-size: 36px;
   color: #FF6060;
   font-weight: 400;
+}
+@media only screen and (min-width: 375px) and (max-width: 975px) {
+  .accomodation__page .accomodation__info .accomodation__title {
+    margin-bottom: 15px;
+  }
 }
 .accomodation__page .accomodation__info .accomodation__location {
   font-size: 18px;
@@ -223,12 +370,30 @@
   justify-content: flex-end;
   flex-wrap: wrap;
 }
+@media only screen and (min-width: 375px) and (max-width: 975px) {
+  .accomodation__page .host__info {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
 .accomodation__page .host__info .host--pic {
   height: 70px;
   object-fit: contain;
   border-radius: 50%;
   display: flex;
   align-self: center;
+}
+@media only screen and (min-width: 375px) and (max-width: 975px) {
+  .accomodation__page .host__info .host--pic {
+    order: 3;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .accomodation__page .host__info .host--pic {
+    height: 50px;
+  }
 }
 .accomodation__page .host__info .host--name {
   font-size: 18px;
@@ -238,11 +403,24 @@
   align-items: center;
   padding: 10px;
 }
+@media only screen and (min-width: 375px) and (max-width: 975px) {
+  .accomodation__page .host__info .host--name {
+    order: 2;
+    justify-content: flex-end;
+  }
+}
 .accomodation__page .host__info .star--rating {
   width: 100%;
   font-size: 24px;
   display: flex;
   justify-content: flex-end;
+}
+@media only screen and (min-width: 375px) and (max-width: 975px) {
+  .accomodation__page .host__info .star--rating {
+    order: 1;
+    justify-content: left;
+    font-size: 18px;
+  }
 }
 .accomodation__page .host__info .star--rating .stars {
   padding: 5px;
@@ -259,14 +437,32 @@
   margin: 0;
   gap: 50px;
 }
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .accomodation__page .collapses--accomodation {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .accomodation__page .collapses--accomodation .collapse__item {
   width: 50%;
   margin: 50px 0;
+}
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .accomodation__page .collapses--accomodation .collapse__item {
+    margin: 15px 0;
+    width: auto;
+  }
 }
 .accomodation__page .collapses--accomodation .collapse__btn {
   border-radius: 10px;
   font-size: 18px;
   padding: 5px 15px;
+}
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .accomodation__page .collapses--accomodation .collapse__btn {
+    padding: 0 10px;
+    font-size: 13px;
+  }
 }
 
 .error__page {
@@ -274,12 +470,22 @@
   justify-content: center;
   flex-direction: column;
 }
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .error__page {
+    margin: 45px;
+  }
+}
 .error__page--title {
   display: flex;
   justify-content: center;
   color: #FF6060;
   font-size: 288px;
   margin: 45px;
+}
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .error__page--title {
+    font-size: 144px;
+  }
 }
 .error__page--text {
   display: flex;
@@ -289,6 +495,12 @@
   margin: 45px;
   font-weight: 500;
 }
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .error__page--text {
+    font-size: 18px;
+    text-align: center;
+  }
+}
 .error__page--link {
   display: flex;
   justify-content: center;
@@ -296,12 +508,18 @@
   font-size: 18px;
   margin: 80px;
 }
+@media only screen and (min-width: 375px) and (max-width: 528px) {
+  .error__page--link {
+    font-size: 14px;
+    margin: 40px 0;
+  }
+}
 
 * {
   font-family: "MontSerrat", sans-serif;
 }
 
-body {
+body, #root {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -322,6 +540,21 @@ h3 {
 
 h4 {
   font-size: 14px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 12px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

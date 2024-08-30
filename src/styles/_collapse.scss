@@ -3,22 +3,35 @@
 
 .collapses__section {
   margin: 0 100px;
-
+  @media only screen and (min-width:375px) and (max-width:528px) {
+    margin: 70px 0;
+  }
+  @media only screen and (min-width:529px) and (max-width:975px) {
+    margin: 0 40px;
+  }
   .collapse__item {
     margin: 50px;
-
+    @media only screen and (min-width:375px) and (max-width:528px) {
+      margin: 20px;
+    }
     .collapse__content {
       @include collapse-content(0 30px, 0, translateY(-20px), hidden);
+      @media only screen and (min-width:375px) and (max-width:528px) {
+        @include collapse-content(0 30px, 10px, translateY(-20px), hidden);
+      }
     
         &--open {
           @include collapse-content(0px 30px, 300px, translateY(0), visible);
           line-height: 20px;
-          
         }
       }
 
     .collapse__btn {
       @include collapse-button;
+      @media only screen and (min-width:375px) and (max-width:528px) {
+        font-size: 15px;
+        padding: 0 10px;
+      }
 
       .collapse__icon {
         @include collapse-icon(38px, 700);

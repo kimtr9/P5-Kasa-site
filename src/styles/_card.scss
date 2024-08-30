@@ -11,10 +11,40 @@
     @include flex-centered;
     flex-direction: row;
     flex-wrap: wrap;
-    
+
+    @media only screen and (min-width:375px) and (max-width:768px) {
+        margin: 20px;
+        padding: 0;
+        gap: $padding-plus;
+        background-color: transparent;
+    }
+    @media only screen and (min-width:529px) and (max-width:975px) {
+        padding: $padding-card;
+        margin: 20px;
+    }
+    @media only screen and (min-width:975px) and (max-width:1024px) {
+        padding: $padding-gen;
+    }
 
 
     .card {
         @include card($border-radius-med,28%, 340px, $card-shadow);
+        transition: 0.2s ease-in-out;
+        
+
+        @media only screen and (min-width:375px) and (max-width:768px) {
+            @include card($border-radius-med,100%, 300px, $card-shadow);
+        }
+        @media only screen and (min-width:768px) and (max-width:1024px) {
+            min-width: 40%; 
+            max-height: 300px;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+       
     }
 }

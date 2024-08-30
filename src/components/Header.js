@@ -7,11 +7,11 @@ export default function Header() {
     return (
 
             <header className='header'>
-                <img alt='logo' src={logo} />
+                <img className="logo" alt='logo' src={logo} />
                 <nav className='navbar'>
                   <ul className='nav__links'>
                      <li>
-                       <NavLink to="/" end className={(nav) => (nav.isActive ? "nav__link--active" : "nav__link")}>
+                       <NavLink to="./" end className={(nav) => (nav.isActive ? "nav__link--active" : "nav__link")}>
                         Accueil
                        </NavLink>
                     </li>

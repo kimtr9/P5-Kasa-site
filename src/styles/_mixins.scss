@@ -40,8 +40,8 @@
 }
 
 //cards 
-@mixin card($border-radius, $max-width, $height, $text-shadow) {
-    max-width: $max-width;
+@mixin card($border-radius, $width, $height, $text-shadow) {
+    width: $width;
     height: $height;
     border-radius: $border-radius;
     @include flex-centered;
