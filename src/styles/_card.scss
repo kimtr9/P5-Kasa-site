@@ -30,7 +30,6 @@
     .card {
         @include card($border-radius-med,28%, 340px, $card-shadow);
         transition: 0.2s ease-in-out;
-        
 
         @media only screen and (min-width:375px) and (max-width:768px) {
             @include card($border-radius-med,100%, 300px, $card-shadow);

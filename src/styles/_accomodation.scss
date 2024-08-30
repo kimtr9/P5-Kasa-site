@@ -22,13 +22,16 @@
         .carousel--container {
             display: flex;
             height: 400px;
+            width: 100%;
             @media only screen and (min-width:328px) and (max-width:975px) {
                 font-size: 30px;
                 height: 300px;
             }
             .carousel__img {
-                min-width: 100%;
-                object-fit: cover;
+                object-fit:cover;
+                width: 100%;
+                height: 100%;
+                object-position: center;
             } 
 
             .prev--btn, .next--btn {
@@ -56,6 +59,8 @@
     }
 
     .accomodation__info {
+        width: 60%;
+
         .accomodation__title {
             color: $primary-color;
             font-weight: 400;
@@ -74,15 +79,18 @@
             gap: 10px;
         
             .tags {
-                @include button-base;
+               @include button-base;
                @include button-size (100%, auto, $border-radius-plus, 5px 15px);
                flex-wrap: nowrap;
+               @media only screen and (min-width:375px) and (max-width:528px) {
+                flex-wrap: wrap;
+            }
             }
         }
     }
    
     .host__info {
-        width: auto;
+        width: 40%;
         display: flex;
         justify-content: flex-end;
         flex-wrap: wrap;

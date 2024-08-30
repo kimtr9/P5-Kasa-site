@@ -14,16 +14,15 @@ export default function Accomodation() {
     if (!accomodation) {
         return <div> <PageNotFound /> </div>
     }
-    const tags = accomodation.tags.map(tag => {
+    const tags = accomodation.tags.map((tag, index) => {
         return (
-            <button className="tags">{tag}</button>
+            <button key={index} className="tags">{tag}</button>
         )
     }
     )
     const equipments = accomodation.equipments.map((equipment) =>  (
-            <li key={equipment}>{equipment}</li>
+            <p key={equipment}>{equipment}</p>
     ));
-        
 
     const starRating = (rating) => {
         const stars = [];
@@ -66,7 +65,7 @@ export default function Accomodation() {
                    content= {accomodation.description} />
                 <Collapse
                    title= 'Equipements' 
-                   content= {<ul>{equipments}</ul>} /> 
+                   content= {equipments} /> 
             </div>
         </div>
         
