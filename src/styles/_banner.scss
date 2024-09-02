@@ -16,7 +16,7 @@
     align-items: center;
     box-shadow: $shadow;
 
-    @media only screen and (min-width:375px) and (max-width:528px) {
+    @media only screen and (min-width:320px) and (max-width:768px) {
         margin: 20px;
         height: 111px;
         justify-content: left;
@@ -26,7 +26,7 @@
 
     &__text {
         text-shadow: $shadow;
-        @media only screen and (min-width:375px) and (max-width:528px) {
+        @media only screen and (min-width:320px) and (max-width:528px) {
             width: 62%;
             padding: $padding-plus;  
         }

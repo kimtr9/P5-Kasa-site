@@ -17,8 +17,8 @@ export default function Collapse({open, content, title}) {
                 <i className="fa fa-angle-down" /> 
             </span>
           </button>
-          <div className={`collapse__content ${isOpen ? 'collapse__content--open' : ''}`}>
-               {content}
+          <div className={` ${isOpen ? 'collapse__content--open' : 'collapse__content'}`}>
+               <span className='collapse__text'> {content} </span>
           </div>
       </div>
 

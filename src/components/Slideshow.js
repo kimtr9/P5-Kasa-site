@@ -7,7 +7,7 @@ export default function Slideshow(props)  {
     const pictures = props.pictures;
 
     if (pictures.length === 1) {
-        return <img src={pictures[0]} alt='image' />;
+        return <img src={pictures[0]} alt='image' className="carousel__img" />;
     }
 
     const handlePrev = () => {

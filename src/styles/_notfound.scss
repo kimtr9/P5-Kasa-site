@@ -5,13 +5,13 @@
 .error__page {
     @include flex-centered;
     flex-direction: column;
-    @media only screen and (min-width:375px) and (max-width:528px) {
+    @media only screen and (min-width:320px) and (max-width:528px) {
         margin: $margin;
     }
 
     &--title {
         @include error-page-text(288px, $margin, $primary-color);
-        @media only screen and (min-width:375px) and (max-width:528px) {
+        @media only screen and (min-width:320px) and (max-width:528px) {
             font-size: 144px;
         }
     }
@@ -19,7 +19,7 @@
     &--text {
         @include error-page-text(36px, $margin, $primary-color);
         font-weight: 500;
-        @media only screen and (min-width:375px) and (max-width:528px) {
+        @media only screen and (min-width:320px) and (max-width:528px) {
             font-size:18px;
             text-align:  center;         
         }
@@ -28,7 +28,7 @@
     
     &--link {
         @include error-page-text(18px, $margin-plus, $paragraph-color);
-        @media only screen and (min-width:375px) and (max-width:528px) {
+        @media only screen and (min-width:320px) and (max-width:528px) {
             font-size: 14px;
             margin: 40px 0;
         }

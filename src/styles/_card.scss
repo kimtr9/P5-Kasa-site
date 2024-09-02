@@ -7,12 +7,12 @@
     border-radius: $border-radius-plus;
     margin: $margin-plus;
     padding: $padding-card;
-    gap: $margin-plus;
+    gap: 45px;
     @include flex-centered;
     flex-direction: row;
     flex-wrap: wrap;
 
-    @media only screen and (min-width:375px) and (max-width:768px) {
+    @media only screen and (min-width:320px) and (max-width:768px) {
         margin: 20px;
         padding: 0;
         gap: $padding-plus;
@@ -31,7 +31,7 @@
         @include card($border-radius-med,28%, 340px, $card-shadow);
         transition: 0.2s ease-in-out;
 
-        @media only screen and (min-width:375px) and (max-width:768px) {
+        @media only screen and (min-width:320px) and (max-width:768px) {
             @include card($border-radius-med,100%, 300px, $card-shadow);
         }
         @media only screen and (min-width:768px) and (max-width:1024px) {
