@@ -7,7 +7,10 @@ export default function Header() {
     return (
 
             <header className='header'>
-                <img className="logo" alt='logo' src={logo} />
+                <a className="logo" href="/">
+                <img className="logo__img" alt='logo' src={logo}/>
+                </a>
+                
                 <nav className='navbar'>
                   <ul className='nav__links'>
                      <li>

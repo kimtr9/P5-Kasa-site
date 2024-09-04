@@ -58,12 +58,18 @@
                 @media only screen and (min-width:320px) and (max-width:975px) {
                     left: 0;
                 }
+            &:hover {
+                    cursor: pointer;
+                }
 
             }
             .next--btn {
                 right: 10px;
                 @media only screen and (min-width:320px) and (max-width:975px) {
                     right: 0;
+                }
+            &:hover {
+                    cursor: pointer;
                 }
             }  
         }
