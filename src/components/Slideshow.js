@@ -11,8 +11,7 @@ export default function Slideshow(props)  {
     }
 
     const handlePrev = () => {
-        setCurrentIndex((prevIndex) => 
-           prevIndex === 0 ? pictures.length -1 : prevIndex -1
+        setCurrentIndex((prevIndex) => (prevIndex -1 + pictures.length) % pictures.length 
         )
     }
     const handleNext = () => {

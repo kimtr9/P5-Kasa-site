@@ -18,8 +18,7 @@ export default function Accomodation() {
         return (
             <button key={index} className="tags">{tag}</button>
         )
-    }
-    )
+    })
     const equipments = accomodation.equipments.map((equipment) =>  (
             <p key={equipment}>{equipment}</p>
     ));
@@ -34,7 +33,6 @@ export default function Accomodation() {
         for (let i = rating; i < 5; i++) {
             stars.push(<span key={i}><i className=" stars star--empty  fa fa-light fa-star"></i></span>);
         }
-
         return stars;
     };
 

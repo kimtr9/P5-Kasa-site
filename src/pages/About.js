@@ -30,8 +30,6 @@ export default function About() {
             },
     ]
 
-
-
     const aboutCollapses = aboutList.map((item, index) => {
         return (
             <Collapse
