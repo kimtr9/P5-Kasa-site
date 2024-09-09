@@ -24,11 +24,12 @@ export default function Slideshow(props)  {
             <div className="carousel--container">
               <img className="carousel__img" src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
                <button className="prev--btn" onClick={handlePrev}>
-               ❮ 
+               <i className=" chevron--icon fa fa-angle-left"></i> 
                </button>
                <button className="next--btn" onClick={handleNext}>
-               ❯
+               <i className="chevron--icon fa fa-angle-right"></i>
                </button>  
+               <p className="img__pagination">{[currentIndex + 1]}/{pictures.length}</p>
             </div>         
         </div>
     )

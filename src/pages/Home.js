@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
-import data from "../data/data.json"
+import data from "../data/logements.json"
 import backgroundImgHome from '../images/background-pic-home.png'
 
                

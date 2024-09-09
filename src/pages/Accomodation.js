@@ -5,7 +5,7 @@ import PageNotFound from "./PageNotFound";
 import Slideshow from '../components/Slideshow'
 import Collapse from "../components/Collapse";
 
-import data from '../data/data.json'
+import data from '../data/logements.json'
 
 export default function Accomodation() {
     const { id } = useParams();
